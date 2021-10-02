@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+   "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+   "http://struts.apache .org/dtds/struts-2.5.dtd">
+
+<struts>
+	<package name="default" extends="json-default">
+			<action name="fetchDataAction" class="com.highradius.Action.fetchDataAction"> 
+				<!-- method="your_method_name"> --> 
+	
+		<!-- default method for action is execute()  
+			<result name="success">/success.jsp</result> -->	
+			<result name="success" type="json"><param name="root">Obj</param></result>
+			<result name="failure">/error.jsp</result>
+			
+		</action>
+		
+		
+		 <action name="addAction" class="com.highradius.Action.addAction"> 
+			<result name="success" type="json">
+				<!-- <params name="film">film</params>
+				<params name="total">total</params> -->
+			</result>
+			<result name="failure">/error.jsp</result>
+		</action> 
+		
+		
+		<action name="editAction" class="com.highradius.Action.editAction"> 
+			<result name="success" type="json">
+				<!-- <params name="film">film</params>
+				<params name="total">total</params> -->
+			</result>
+			<result name="failure">/error.jsp</result>
+		</action>
+		
+		
+		<action name="deleteAction" class="com.highradius.Action.deleteAction"> 
+			<result name="success" type="json">
+				<!-- <params name="film">film</params>
+				<params name="total">total</params> -->
+			</result>
+			<result name="failure">/error.jsp</result>
+		</action>
+	</package>
+</struts>

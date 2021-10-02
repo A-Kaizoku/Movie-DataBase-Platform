@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+
+<hibernate-mapping>
+   <class name = "servlets.FilmPOJO" table = "film">
+      
+     <!--  <meta attribute = "class-description">
+         This class contains the employee detail. 
+      </meta> -->
+      
+      <!-- 
+      	private int FilmId;
+	private String Title;
+	private String Description;
+	private String Year;
+	private String director;
+	private int LanguageId;
+	private int OriginalLanguageId;
+	private int RentalDuration;
+	private float RentalRate; 
+	private int Length;
+	private float ReplacementCost;
+	private String Rating;
+	private String SpecialFeatures;
+	private String LastUpdate; -->
+      
+      <id name = "FilmId" column = "film_id"  type = "int">
+         <generator class="native"/>
+      </id>
+      
+      <property name = "Title" column = "title" type = "string"/>
+      <property name = "Description" column = "description" type = "string"/>
+      <property name = "Year" column = "release_year" type = "string"/>
+      <property name = "director" column = "director" type = "string"/>
+      <property name = "LanguageId" column = "language_id" type = "int"/>
+      <property name = "Rating" column = "rating" type = "string"/>
+      <property name = "SpecialFeatures" column = "special_features" type = "string"/>
+   </class>
+</hibernate-mapping>
